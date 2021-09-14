@@ -1,0 +1,79 @@
+* {
+    margin: 0;
+    
+}
+header {
+    background: #023d6d;
+    color: white;
+    padding: 1rem;
+    text-align: center;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
+    width: 100%;
+  }
+
+  header h1 {
+      font-size:  42px;
+  }
+
+  nav {
+    background: #e6e7e7;
+    color: white;
+    padding: 1rem;
+    text-align: center;
+    width: 100%;
+    position:sticky;
+    margin-bottom: 20px;
+
+  }
+
+  nav ul li {
+      list-style: none;
+      display: inline-block;
+      position: relative;
+  }
+
+  nav ul li a {
+      color: #023d6d;
+      text-decoration: none;
+      font-size: 20px;
+      padding: 8px 23px;
+      
+  }
+
+  nav ul li a:hover{
+      color:sandybrown;
+      transition: 0.2s;
+  }
+
+  /* --------- GRID -----------*/
+
+  .grid-container{
+      max-width: 1200px;
+      display:grid;
+      grid-template-columns: 30% 30% 30%;
+      padding: 20px 20px;
+      grid-gap:1em;
+      align-items: center; /* usikker på om den funker egentlig? */
+
+      /* 
+      
+      grid-column-gap: 
+      grid-row-gap: 
+    
+      */
+
+  }
+
+  .grid-container > div {
+      background-color: sandybrown;
+      padding: 1em;
+      text-align: center;
+  }
+
+  .grid-container > div > h2 {
+      padding-bottom: 0.5em;
+  }
+
+  .grid-container > div:nth-child(odd){
+      background-color: rgb(255, 213, 158);
+  }
