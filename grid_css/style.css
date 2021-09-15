@@ -1,6 +1,7 @@
 * {
     margin: 0;
     
+    
 }
 header {
     background: #023d6d;
@@ -9,6 +10,7 @@ header {
     text-align: center;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
     width: 100%;
+    
   }
 
   header h1 {
@@ -16,13 +18,17 @@ header {
   }
 
   nav {
-    background: #e6e7e7;
+    background: #326a97;
     color: white;
     padding: 1rem;
     text-align: center;
     width: 100%;
     position:sticky;
     margin-bottom: 20px;
+    position: fixed; /* Set the navbar to fixed position */
+    top: 0; /* Position the navbar at the top of the page */
+    width: 100%; /* Full width */
+
 
   }
 
@@ -33,7 +39,7 @@ header {
   }
 
   nav ul li a {
-      color: #023d6d;
+      color: #f3f3f3;
       text-decoration: none;
       font-size: 20px;
       padding: 8px 23px;
@@ -48,12 +54,13 @@ header {
   /* --------- GRID -----------*/
 
   .grid-container{
+      margin-top: 4em;
       max-width: 1200px;
       display:grid;
-      grid-template-columns: 30% 30% 30%;
+      grid-template-columns: repeat(3, 1fr);
       padding: 20px 20px;
       grid-gap:1em;
-      align-items: center; /* usikker på om den funker egentlig? */
+      justify-content: center; /* usikker på om den funker egentlig? */
 
       /* 
       
@@ -77,3 +84,11 @@ header {
   .grid-container > div:nth-child(odd){
       background-color: rgb(255, 213, 158);
   }
+
+
+  /* hva er egt riktig å bruke på max og min width? */
+   @media screen and (max-width: 768px){
+        .grid-container {
+            grid-template-columns: 1fr;
+        }
+   }
